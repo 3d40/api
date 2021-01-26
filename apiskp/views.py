@@ -32,7 +32,7 @@ class PartnerEmployeeStudyTypeList(viewsets.ReadOnlyModelViewSet):
     queryset = PartnerEmployeeStudyType.objects.all()
     serializer_class = PartnerEmployeeStudyDegreeSerializer
     filter_backends = [SearchFilter]
-    search_fields = ['id']
+    search_fields = str(['id'])
     filter_backends = ['golongan']
 
 class RiwayatPangkat (viewsets.ReadOnlyModelViewSet):
