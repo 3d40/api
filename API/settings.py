@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import sys
 import dj_database_url
 #DATABASES['default'] =  dj_database_url.config()
 
@@ -34,7 +35,6 @@ ALLOWED_HOSTS = ['skpapijambi.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    #'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,12 +139,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = 'apiskp/static/'
+STATIC_URL = '/static/'
 
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'apiskp/static'),
+    os.path.join(PROJECT_ROOT, 'static'),
 )
 
 #  Add configuration for static files storage using whitenoise
