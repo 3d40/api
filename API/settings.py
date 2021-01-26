@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from whitenoise.django import DjangoWhiteNoise
+application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
 import dj_database_url
 #DATABASES['default'] =  dj_database_url.config()
 
