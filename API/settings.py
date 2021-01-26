@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-from whitenoise.django import DjangoWhiteNoise
-application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
 import dj_database_url
 #DATABASES['default'] =  dj_database_url.config()
 
@@ -96,17 +93,6 @@ DATABASES = {
         'USER': 'skp_jambi',
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'DatabaseName',
-#         'USER': 'DatabaseUserName',
-#         'PASSWORD': 'DatabaseUserpassword',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-
 
 
 # Password validation
@@ -153,7 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
 STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = 'API/static/'
+STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = (
@@ -162,11 +148,3 @@ STATICFILES_DIRS = (
 
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
