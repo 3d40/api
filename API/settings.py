@@ -29,7 +29,7 @@ SECRET_KEY = 'j)4o6+pv^d$qb)z1jq3o-ba2^863a%fik+%_-$6luy6$^xq@yj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['skpapijambi.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['','127.0.0.1']
 
 
 # Application definition
@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'API.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '2020',
-        'PASSWORD': 'admin543',
-        'HOST': '180.250.19.98',
-        'PORT': '5432',
-        'USER': 'skp_jambi',
+        'NAME': 'xxx',
+        'PASSWORD': 'xxx',
+        'HOST': 'xxx',
+        'PORT': 'xxx',
+        'USER': 'xxx',
     }
 }
 
